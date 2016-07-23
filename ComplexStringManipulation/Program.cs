@@ -27,11 +27,11 @@ namespace StringtoDataStructures
                 {
                     switch (c)
                     {
-                        case '{':
+                        case '(':
                             node = new Node { Parent = node, strValue = String.Empty, listSubnodes = new List<Node>() };
                             node.Parent.listSubnodes.Add(node);
                             break;
-                        case '}':
+                        case ')':
                             node = new Node { Parent = node, strValue = String.Empty, listSubnodes = new List<Node>() };
                             if(node.Parent!=null)
                             {
@@ -39,7 +39,7 @@ namespace StringtoDataStructures
                             }
                             break;
 
-                        case '\\':
+                        case ',':
                             escape = true;
                             break;
                         default:
